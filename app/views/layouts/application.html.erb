@@ -7,6 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
+	<div class="navbar navbar-fixed-top">
+	  <div class="navbar-inner">
+	    <div class="container">
+			<a href ="<%= root_path %>" class="brand">Twitta</a>
+	    </div>
+	  </div>
+	</div>
+	<div class="container">
+		<%= yield %>
+		
+		<div id="footer">
+			<%= link_to 'Home', root_path %>
+		</div>
+	</div>
+
+
 </body>
 </html>

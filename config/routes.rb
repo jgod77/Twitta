@@ -1,3 +1,3 @@
 Twitta::Application.routes.draw do
-match "/", :to => 'pages#home'
+  root :to => 'pages#home'
 end
