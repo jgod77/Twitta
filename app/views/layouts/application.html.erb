@@ -13,10 +13,26 @@
 			<a href ="<%= root_path %>" class="brand">Twitta</a>
 			<ul	class="nav pull-left">
 				<li><%= link_to "Users", users_path %></li>
-				<li><%= link_to "About", '#' %>
+				<li><%= link_to "About", about_path %>
 			</ul>
 			<ul class="nav pull-right">
-				<% if logged_in?%>
+				<% if logged_in? %>
+					<ul class="nav nav-pills">
+					  <li class="dropdown" id="menu1">
+					    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+					      Dropdown
+					      <b class="caret"></b>
+					    </a>
+					    <ul class="dropdown-menu">
+					      <li><a href="#">Action</a></li>
+					      <li><a href="#">Another action</a></li>
+					      <li><a href="#">Something else here</a></li>
+					      <li class="divider"></li>
+					      <li><a href="#">Separated link</a></li>
+					    </ul>
+					  </li>
+					  ...
+					</ul>
 					<li><%= link_to current_user.username, current_user %></li>
 					<li><%= link_to "Logout", logout_users_path %></li>
 				<% else %>
@@ -44,7 +60,7 @@
 		<div id="footer">
 			<%= link_to 'Home', root_path %>
 			<%= link_to 'Users', users_path %>
-			<%= link_to 'About', '#' %>
+			<%= link_to 'About', about_path %>
 		</div>
 	</div>
 
