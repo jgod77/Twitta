@@ -1,0 +1,29 @@
+<div class="row">
+	
+	<div class="span8">
+		<h1>Sign Up</h1>
+		<%= form_for @user do |f| %>
+		
+			<div>
+				<%= f.label :username %>
+				<%= f.text_field :username %>
+			</div>
+			<div>
+				<%= f.label :email %>
+				<%= f.text_field :email %>
+			</div>	
+			<div>
+				<%= f.label :temp_password %>
+				<%= f.password_field :temp_password %>
+			</div>
+			<div class="actions">
+				<%= f.submit 'Sign Up', :class => 'btn btn-primary' %>
+			</div>
+	<% end %>
+	</div>
+	
+	<div class="span4">
+		<h3>Welcome</h3>
+		<p>We're so glad to have you!</p>
+	</div>
+</div>
