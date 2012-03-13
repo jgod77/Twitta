@@ -1,8 +1,13 @@
+<% if logged_in?%>
 <div class="hero-unit">
 	<h1>Twitta</h1>
 	<p>So much better than twitter, because thats how we roll.</p>
-	<a class="btn btn-primary btn-large">Join Now</a>
- 
 </div>
-
+<% else %>
+<div class="hero-unit">
+	<h1>Twitta</h1>
+	<p>So much better than twitter, because thats how we roll.</p>
+	<a href="new" class="btn btn-primary btn-large">Join Now</a>
+</div>
+<% end%>
 

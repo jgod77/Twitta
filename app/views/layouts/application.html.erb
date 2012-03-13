@@ -12,7 +12,8 @@
 	    <div class="container">
 			<a href ="<%= root_path %>" class="brand">Twitta</a>
 			<ul	class="nav pull-left">
-				<li><%= link_to "Users", users_path%></li>
+				<li><%= link_to "Users", users_path %></li>
+				<li><%= link_to "About", '#' %>
 			</ul>
 			<ul class="nav pull-right">
 				<% if logged_in?%>
@@ -42,6 +43,8 @@
 		
 		<div id="footer">
 			<%= link_to 'Home', root_path %>
+			<%= link_to 'Users', users_path %>
+			<%= link_to 'About', '#' %>
 		</div>
 	</div>
 

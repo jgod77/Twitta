@@ -7,6 +7,8 @@ Twitta::Application.routes.draw do
     end
   end
   
+  match "/about", :to => 'pages#about'
+  match "/new", :to => 'users#new'
   root :to => 'pages#home'
   
 end
