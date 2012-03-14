@@ -1,22 +1,38 @@
 <h1><%= @user.name %></h1>
-<div class="row">
-	<div class="span4">
-		<div class="hero-unit">
-			<h2><%= @user.username %></h2>
-			<div>
-				
+<hr/>
+<div class="container-fluid">
+	<div class="row">
+		<div class="span4">
+			<div class="container-fluid">
+				<h2><%= @user.username %></h2>
+				<%= image_tag @user.avatar.url(:thumb) %>
 			</div>
 		</div>
-	</div>
-	<div id="span6 offset6">
-		<div class="hero-unit">
-			<h3>About:</h3><p><%= @user.about %></p>
+		<div id="span6 offset4">
+			<div class="hero-unit">
+				<span class="label label-info">About:</span><p><%= @user.about %></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="well">
+				<div class="span4">
+				<p><%= @user.about %></p>	
+				</div>
+				<div class="span2 offset4">
+					<% if logged_in?&&current_user==@user %>
+					<%= link_to "Post", '#', :class => 'btn btn-warning' %>
+					<%= link_to "Blah", '#', :class => 'btn btn-success' %>
+					<% else %>
+					<%= link_to "Like", '#', :class => 'btn btn-info' %>
+					<% end %>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 <div id="edit">
 	<% if logged_in?&&current_user==@user %>
-	<%= link_to "Edit", edit_user_path(@user), :class => 'btn btn-primary btn-large' %>
+	<%= link_to "Edit", edit_user_path(@user), :class => 'btn btn-info btn-large' %>
 	<% else %>
 	<% end %>
 </div>

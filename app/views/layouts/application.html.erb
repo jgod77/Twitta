@@ -47,11 +47,13 @@
 		<% if flash[:error] %>
 			<div class="alert alert-error">
 				<%= flash[:error] %>
+				<a class="close">&times;</a>
 			</div>
 		<% end %>
 		<% if flash[:success]%>
 			<div class="alert alert-success">
 				<%= flash[:success] %>
+				<a class="close">&times;</a>
 			</div>
 		<% end %>
 		
