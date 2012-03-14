@@ -2,7 +2,7 @@
 	
 	<div class="span8">
 		<h1>Sign Up</h1>
-		<%= form_for @user do |f| %>
+		<%= form_for @user, :html => { :multipart => true } do |f| %>
 		
 			<div>
 				<%= f.label :username %>
@@ -16,10 +16,14 @@
 				<%= f.label :temp_password %>
 				<%= f.password_field :temp_password %>
 			</div>
+			<div>
+				<%= f.label :avatar %>
+			  	<%= f.file_field :avatar %>
+			</div>
 			<div class="actions">
 				<%= f.submit 'Sign Up', :class => 'btn btn-primary' %>
 			</div>
-	<% end %>
+		<% end %>
 	</div>
 	
 	<div class="span4">

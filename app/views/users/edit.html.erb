@@ -2,7 +2,7 @@
 	
 	<div class="span8">
 		<h1>Edit</h1>
-		<%= form_for @user do |f| %>
+		<%= form_for @user, :html => { :multipart => true } do |f| %>
 		
 			<div>
 				<%= f.label :name %>
@@ -12,11 +12,15 @@
 				<%= f.label :about %>
 				<%= f.text_area :about %>
 			</div>	
-
+			<div>
+				<%= f.label :avatar %>
+			  	<%= f.file_field :avatar %>
+			</div>
 			<div class="actions">
 				<%= f.submit 'Submit', :class => 'btn btn-primary' %>
 			</div>
-	<% end %>
+
+		<% end %>
 	</div>
 	
 	<div class="span4">

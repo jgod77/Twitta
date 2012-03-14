@@ -1,3 +1,11 @@
 <% for user in @users %>
-	<%= link_to user.username, user %>
+<div class="row">
+	<div class="span6">
+		<div class="hero-unit">
+			<%= link_to user.username, user %>
+		</div>
+	</div>
+</div>
+
+	
 <% end %>

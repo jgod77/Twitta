@@ -57,7 +57,6 @@ class UsersController < ApplicationController
   def logout
     session[:user_id] = nil
     flash[:success] = "Hope to see you soon."
-    redirect_to root_path    
-    
+    redirect_to root_path   
   end
 end

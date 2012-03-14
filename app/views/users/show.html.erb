@@ -3,6 +3,9 @@
 	<div class="span4">
 		<div class="hero-unit">
 			<h2><%= @user.username %></h2>
+			<div>
+				
+			</div>
 		</div>
 	</div>
 	<div id="span6 offset6">
@@ -12,8 +15,8 @@
 	</div>
 </div>
 <div id="edit">
-	<% if logged_in? %>
-	<%= link_to "Edit", edit_user_path(@user) %>
+	<% if logged_in?&&current_user==@user %>
+	<%= link_to "Edit", edit_user_path(@user), :class => 'btn btn-primary btn-large' %>
 	<% else %>
 	<% end %>
 </div>
